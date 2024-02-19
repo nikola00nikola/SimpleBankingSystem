@@ -3,11 +3,11 @@
 Jednostavan softverski sistem za simuliranje rada jedne banke.
 
 ## Opis
-[Klijentska aplikacija](https://github.com/nikola00nikola/SimpleBankingSystem/blob/main/klijent/src/klijent/Klijent.java) interaguje sa korisnikom preko konzole, šalje odgovarajuće http zahteve (RETROFIT api) centralnom serveru, i dobija odgovor, koji zatim prikazuje korisniku.
+[Klijentska aplikacija](https://github.com/nikola00nikola/SimpleBankingSystem/blob/main/klijent/src/klijent/Klijent.java) interaguje sa korisnikom preko konzole, šalje odgovarajuće http zahteve (**RETROFIT** api) centralnom serveru, i dobija odgovor, koji zatim prikazuje korisniku.
 
-[Centralni Server](https://github.com/nikola00nikola/SimpleBankingSystem/tree/main/centralniserver/src/main/java/endpoints) je veb aplikacija(JAX-RS api). Samu obradu zahteva prepušta odgovarajucem podsistemu.
+[Centralni Server](https://github.com/nikola00nikola/SimpleBankingSystem/tree/main/centralniserver/src/main/java/endpoints) je veb aplikacija(**JAX-RS** api). Samu obradu zahteva prepušta odgovarajucem podsistemu.
 
-Komunikacija izmedju centalnog servera i odgovarajućih podsistema implementirana je koriscenjem JMS api-ja, komunikacija se odvija preko Glassfish servera(Resource: Message Queue).
+Komunikacija izmedju centalnog servera i odgovarajućih podsistema implementirana je koriscenjem **JMS** api-ja, komunikacija se odvija preko Glassfish servera(Resource: Message Queue).
 
 Baze podataka su implementirane korišćenjem mySql, data je [skripta](https://github.com/nikola00nikola/SimpleBankingSystem/blob/main/init.sql) za kreiranje sema i tabela. Baza(šema) podsistem3 predstavlja back-up bazu za baze podsistem1 i podsistem2. Podsistemi su odgovorni za rad sa bazama. Interakcija svih podsistema sa bazom je implementirana koriscenjem JPA.
 
