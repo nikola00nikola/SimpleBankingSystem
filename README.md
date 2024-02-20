@@ -9,7 +9,7 @@ Jednostavan softverski sistem za simuliranje rada jedne banke.
 
 Komunikacija izmedju centalnog servera i odgovarajućih podsistema implementirana je koriscenjem **JMS** api-ja, komunikacija se odvija preko Glassfish servera(Resource: Message Queue).
 
-Baze podataka su implementirane korišćenjem mySql, data je [skripta](https://github.com/nikola00nikola/SimpleBankingSystem/blob/main/init.sql) za kreiranje sema i tabela. Baza(šema) podsistem3 predstavlja back-up bazu za baze podsistem1 i podsistem2. Podsistemi su odgovorni za rad sa bazama. Interakcija svih podsistema sa bazom je implementirana koriscenjem JPA.
+Baze podataka su implementirane korišćenjem mySql, data je [skripta](https://github.com/nikola00nikola/SimpleBankingSystem/blob/main/init.sql) za kreiranje sema i tabela. Baza(šema) podsistem3 predstavlja back-up bazu za baze podsistem1 i podsistem2. Podsistemi su odgovorni za rad sa bazama. Interakcija svih podsistema sa bazom je implementirana koriscenjem **JPA**.
 
 Uloga podsistema1 je rad sa tabelama Mesto, Filijala i Komitent. Funkcije koje implementira ovaj podsistem date su u [Main.java](https://github.com/nikola00nikola/SimpleBankingSystem/blob/main/podsistem1/src/java/podsistem1/Main.java) fajlu.
 
